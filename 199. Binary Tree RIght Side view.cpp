@@ -1,5 +1,13 @@
 // Given the root of a binary tree, imagine yourself standing on the right side of it, return the values of the nodes you can see ordered from top to bottom.
 
+// this is done using binarytree and not by maps! Showcasing only the rigth side of the tree
+
+// Constraints:
+
+// The number of nodes in the tree is in the range [0, 100].
+// -100 <= Node.val <= 100
+// Time complexity is O(n) and space complexity is O(h) where h is the height of the tree.
+
 
 
 /**
