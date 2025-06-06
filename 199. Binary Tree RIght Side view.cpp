@@ -23,7 +23,7 @@
  */
 class Solution {
 public:
-vector<int> BinaryTree(TreeNode* root,vector<int>& ans, int level) {
+vector<int> helper(TreeNode* root,vector<int>& ans, int level) {
         if(root== NULL){
         return ans;
         }
@@ -32,16 +32,15 @@ vector<int> BinaryTree(TreeNode* root,vector<int>& ans, int level) {
             ans.push_back(root-> val);
         }
 
-        BinaryTree(root-> right, ans, level+1);
-        BinaryTree(root-> left, ans, level+1);
+        helper(root-> right, ans, level+1);
+        helper(root-> left, ans, level+1);
         return ans;
 }
 
         vector<int> rightSideView(TreeNode* root) {
         vector<int>ans;
         int level = 0;
-        vector<int> result = BinaryTree(root,ans,level);
+        vector<int> result = helper(root,ans,level);
         return result;
     }
 };
-
